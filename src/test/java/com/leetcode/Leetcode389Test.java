@@ -1,4 +1,8 @@
+<<<<<<< HEAD:src/test/java/com/leetcode/Leetcode389Test.java
 package com.leetcode;
+=======
+package leetcode.problems;
+>>>>>>> origin/master:src/test/java/leetcode/problems/Leetcode389Test.java
 
 import org.junit.jupiter.api.Test;
 
