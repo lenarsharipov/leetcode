@@ -1,12 +1,8 @@
-<<<<<<< HEAD:src/test/java/com/leetcode/Leetcode389Test.java
 package com.leetcode;
-=======
-package leetcode.problems;
->>>>>>> origin/master:src/test/java/leetcode/problems/Leetcode389Test.java
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class Leetcode389Test {
     private final Leetcode389 solution = new Leetcode389();
