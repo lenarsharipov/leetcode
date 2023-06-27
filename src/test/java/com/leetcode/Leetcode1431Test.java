@@ -1,4 +1,4 @@
-package leetcode.problems;
+package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,8 +6,8 @@ import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-class L003Leetcode1431Test {
-    private final L003Leetcode1431 solution = new L003Leetcode1431();
+class Leetcode1431Test {
+    private final Leetcode1431 solution = new Leetcode1431();
 
     @Test
     void firstTest() {

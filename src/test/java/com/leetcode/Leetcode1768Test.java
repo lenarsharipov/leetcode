@@ -1,11 +1,11 @@
-package leetcode.problems;
+package com.leetcode;
 
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-class L0001Leetcode1768Test {
-    private final L0001Leetcode1768 solution = new L0001Leetcode1768();
+class Leetcode1768Test {
+    private final Leetcode1768 solution = new Leetcode1768();
 
     @Test
     void testMergeAlternately() {

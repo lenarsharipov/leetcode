@@ -1,4 +1,4 @@
-package leetcode.problems;
+package com.leetcode;
 
 /**
  * https://leetcode.com/problems/merge-strings-alternately/
@@ -39,7 +39,7 @@ package leetcode.problems;
  *     1 <= word1.length, word2.length <= 100
  *     word1 and word2 consist of lowercase English letters.
  */
-public class L0001Leetcode1768 {
+public class Leetcode1768 {
     public String mergeAlternately(String word1, String word2) {
         StringBuilder sb = new StringBuilder();
 

@@ -1,4 +1,4 @@
-package leetcode.problems;
+package com.leetcode;
 
 /**
  * <a href="https://leetcode.com/problems/greatest-common-divisor-of-strings/">...</a>
@@ -25,7 +25,7 @@ package leetcode.problems;
  *     1 <= str1.length, str2.length <= 1000
  *     str1 and str2 consist of English uppercase letters.
  */
-public class L0002Leetcode1071 {
+public class Leetcode1071 {
     public String gcdOfStrings(String str1, String str2) {
         /*
 

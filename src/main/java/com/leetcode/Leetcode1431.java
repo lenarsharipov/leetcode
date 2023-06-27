@@ -1,4 +1,4 @@
-package leetcode.problems;
+package com.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +53,7 @@ import java.util.List;
  *     1 <= candies[i] <= 100
  *     1 <= extraCandies <= 50
  */
-public class L003Leetcode1431 {
+public class Leetcode1431 {
     public List<Boolean> kidsWithCandies(int[] candies, int extraCandies) {
         int max = 0;
         for (int candy : candies) {
