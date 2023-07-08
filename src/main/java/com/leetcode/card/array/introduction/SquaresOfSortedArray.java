@@ -1,4 +1,4 @@
-package com.leetcode.card.array;
+package com.leetcode.card.array.introduction;
 
 /**
  * Squares of a Sorted Array

@@ -1,4 +1,4 @@
-package com.leetcode.card.array;
+package com.leetcode.card.array.introduction;
 
 /**
  * Find Numbers with Even Number of Digits.

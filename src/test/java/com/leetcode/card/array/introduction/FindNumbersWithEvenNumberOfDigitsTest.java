@@ -1,5 +1,6 @@
-package com.leetcode.card.array;
+package com.leetcode.card.array.introduction;
 
+import com.leetcode.card.array.introduction.FindNumbersWithEvenNumberOfDigits;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;

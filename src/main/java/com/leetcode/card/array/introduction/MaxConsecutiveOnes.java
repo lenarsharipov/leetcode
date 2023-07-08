@@ -1,4 +1,4 @@
-package com.leetcode.card.array;
+package com.leetcode.card.array.introduction;
 
 /**
  * Given a binary array nums, return the maximum
