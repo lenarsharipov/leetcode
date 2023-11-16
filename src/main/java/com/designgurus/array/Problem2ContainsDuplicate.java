@@ -1,4 +1,4 @@
-package com.designgurus;
+package com.designgurus.array;
 
 import java.util.HashSet;
 import java.util.Set;

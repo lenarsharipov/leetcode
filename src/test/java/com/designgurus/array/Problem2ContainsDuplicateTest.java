@@ -1,8 +1,8 @@
-package com.designgurus;
+package com.designgurus.array;
 
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class Problem2ContainsDuplicateTest {
     private final Problem2ContainsDuplicate solution = new Problem2ContainsDuplicate();
