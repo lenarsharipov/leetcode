@@ -28,7 +28,9 @@ package com.designgurus.array;
  */
 public class LeftAndRightSumDifferences {
     public int[] findDifferenceArray(int[] nums) {
-        if (nums == null || nums.length < 2) return new int[1];
+        if (nums == null || nums.length < 2) {
+            return new int[1];
+        }
 
         int arrayLength = nums.length;
         int[] differenceArray = new int[arrayLength];
