@@ -3,10 +3,10 @@ package com.algos.designgurus.stack;
 import java.util.Stack;
 
 /**
- * The time complexity of this algorithm is
+ * The time complexity of this algorithm is O(log(n))
  * due to the division by 2 at each step.
  *
- * The space complexity is also  because in
+ * The space complexity is also O(log(n)) because in
  * each step we will be pushing an element
  * on the stack, and there are a total of steps.
  */
