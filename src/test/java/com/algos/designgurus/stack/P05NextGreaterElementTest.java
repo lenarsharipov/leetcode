@@ -7,9 +7,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class NextGreaterElementTest {
+class P05NextGreaterElementTest {
 
-    private final NextGreaterElement solution = new NextGreaterElement();
+    private final P05NextGreaterElement solution = new P05NextGreaterElement();
 
     @Test
     @DisplayName("input: [4, 5, 2, 25], output: [5, 25, 25, -1]")

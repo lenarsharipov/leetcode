@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ReverseStringTest {
+class P02ReverseStringTest {
 
-    private final ReverseString solution = new ReverseString();
+    private final P02ReverseString solution = new P02ReverseString();
 
     @Test
     @DisplayName("Hello world! reversed as !dlroW ,olleH")

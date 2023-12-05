@@ -7,7 +7,7 @@ import java.util.Stack;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SortingStackTest {
+class P06SortingStackTest {
 
     @Test
     @DisplayName("Input: [34, 3, 31, 98, 92, 23], Output: [3, 23, 31, 34, 92, 98]")
@@ -28,7 +28,7 @@ class SortingStackTest {
         expected.add(92);
         expected.add(98);
 
-        Stack<Integer> actualResult = SortingStack.sortStack(input);
+        Stack<Integer> actualResult = P06SortingStack.sortStack(input);
 
         assertEquals(expected, actualResult, "Should have returned stack: [3, 23, 31, 34, 92, 98]");
 
@@ -57,7 +57,7 @@ class SortingStackTest {
         expected.add(10);
         expected.add(12);
 
-        Stack<Integer> actualResult = SortingStack.sortStack(input);
+        Stack<Integer> actualResult = P06SortingStack.sortStack(input);
 
         assertEquals(expected, actualResult, "Should have returned stack: [1, 2, 3, 4, 5, 6, 10, 12]");
     }
@@ -77,7 +77,7 @@ class SortingStackTest {
         expected.add(10);
         expected.add(20);
 
-        Stack<Integer> actualResult = SortingStack.sortStack(input);
+        Stack<Integer> actualResult = P06SortingStack.sortStack(input);
 
         assertEquals(expected, actualResult, "Should have returned stack: [-5, -1, 10, 20]");
 
@@ -100,7 +100,7 @@ class SortingStackTest {
         expected.add(4);
         expected.add(5);
 
-        Stack<Integer> actualResult = SortingStack.sortStack(input);
+        Stack<Integer> actualResult = P06SortingStack.sortStack(input);
 
         assertEquals(expected, actualResult, "Should have returned stack: [1, 2, 3, 4, 5]");
 

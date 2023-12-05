@@ -5,33 +5,33 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BalancedParenthesesTest {
+class P01BalancedParenthesesTest {
 
     @Test
     @DisplayName("fvdv")
     void whenBalancedThenShouldReturnTrue() {
-        var solution = new BalancedParentheses();
+        var solution = new P01BalancedParentheses();
         var input = "{[()]}";
         assertTrue(solution.isValid(input), "");
     }
 
     @Test
     void whenNotBalancedThenShouldReturnFalse() {
-        var solution = new BalancedParentheses();
+        var solution = new P01BalancedParentheses();
         var input = "{[}]";
         assertFalse(solution.isValid(input), "");
     }
 
     @Test
     void whenNotBalanced2ThenShouldReturnFalse() {
-        var solution = new BalancedParentheses();
+        var solution = new P01BalancedParentheses();
         var input = "(]";
         assertFalse(solution.isValid(input), "");
     }
 
     @Test
     void whenNotBalanced3ThenShouldReturnFalse() {
-        var solution = new BalancedParentheses();
+        var solution = new P01BalancedParentheses();
         var input = "]}";
         assertFalse(solution.isValid(input), "");
     }

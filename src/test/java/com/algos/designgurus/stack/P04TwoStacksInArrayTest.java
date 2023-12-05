@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TwoStacksInArrayTest {
-    private TwoStacksInArray solution;
+class P04TwoStacksInArrayTest {
+    private P04TwoStacksInArray solution;
 
     @BeforeEach
     void init() {
-        solution = new TwoStacksInArray(100);
+        solution = new P04TwoStacksInArray(100);
     }
 
     @Test

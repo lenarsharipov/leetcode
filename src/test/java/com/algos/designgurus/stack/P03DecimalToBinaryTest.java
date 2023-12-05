@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DecimalToBinaryTest {
+class P03DecimalToBinaryTest {
 
     @Test
     @DisplayName("Convert 2 into binary")
@@ -13,7 +13,7 @@ class DecimalToBinaryTest {
         var num = 2;
         var expectedResult = "10";
 
-        var actualResult = DecimalToBinary.decimalToBinary(num);
+        var actualResult = P03DecimalToBinary.decimalToBinary(num);
 
         assertEquals(expectedResult, actualResult, "Should have returned " + expectedResult);
     }
@@ -24,7 +24,7 @@ class DecimalToBinaryTest {
         var num = 7;
         var expectedResult = "111";
 
-        var actualResult = DecimalToBinary.decimalToBinary(num);
+        var actualResult = P03DecimalToBinary.decimalToBinary(num);
 
         assertEquals(expectedResult, actualResult, "Should have returned " + expectedResult);
     }
@@ -35,7 +35,7 @@ class DecimalToBinaryTest {
         var num = 18;
         var expectedResult = "10010";
 
-        var actualResult = DecimalToBinary.decimalToBinary(num);
+        var actualResult = P03DecimalToBinary.decimalToBinary(num);
 
         assertEquals(expectedResult, actualResult, "Should have returned " + expectedResult);
     }
@@ -46,7 +46,7 @@ class DecimalToBinaryTest {
         var num = 1;
         var expectedResult = "1";
 
-        var actualResult = DecimalToBinary.decimalToBinary(num);
+        var actualResult = P03DecimalToBinary.decimalToBinary(num);
 
         assertEquals(expectedResult, actualResult, "Should have returned " + expectedResult);
     }
