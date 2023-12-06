@@ -32,6 +32,16 @@ import java.util.Deque;
  * Input: "abcd"
  * Expected Output: "abcd"
  * Description: As there is no *, the string remains the same.
+ *
+ *
+ * Time and Space Complexity
+ * The time complexity of the algorithm is O(n),
+ * where n is the length of the string.
+ * This is because we perform a single pass over the string.
+ *
+ * The space complexity of the algorithm is O(n),
+ * where n is the length of the string. In the worst case,
+ * if there are no stars, the stack will contain all the characters of the string.
  */
 public class P09RemovingStarsFromAString {
     public String removeStars(String str) {
