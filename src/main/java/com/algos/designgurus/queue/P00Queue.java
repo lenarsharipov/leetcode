@@ -11,13 +11,13 @@ package com.algos.designgurus.queue;
  * We can get the front item by accessing the array element at the front pointer,
  * and we can check if the Queue is empty by comparing the front and rear pointers.
  */
-public class Queue {
+public class P00Queue {
     private int size;
     private int[] queue;
     private int front;
     private int rear;
 
-    public Queue(int size) {
+    public P00Queue(int size) {
         this.size = size;
         this.queue = new int[size];
         this.front = -1;
@@ -54,7 +54,7 @@ public class Queue {
     }
 
     public static void main(String[] args) {
-        Queue queue = new Queue(3);
+        P00Queue queue = new P00Queue(3);
         queue.enqueue(1);
         queue.enqueue(2);
         queue.dequeue();
