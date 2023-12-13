@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class LeftAndRightSumDifferencesTestDG {
+class P03LeftAndRightSumDifferencesTest {
 
-    private final LeftAndRightSumDifferences solution = new LeftAndRightSumDifferences();
+    private final P03LeftAndRightSumDifferences solution = new P03LeftAndRightSumDifferences();
 
     @Test
     public void test1() {

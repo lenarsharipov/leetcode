@@ -26,7 +26,7 @@ package com.algos.designgurus.array;
  * Combining these, the overall space complexity is (O(2n) + O(n) = O(3n)),
  * which simplifies to (O(n)) when considering Big O notation.
  */
-public class LeftAndRightSumDifferences {
+public class P03LeftAndRightSumDifferences {
     public int[] findDifferenceArray(int[] nums) {
         if (nums == null || nums.length < 2) {
             return new int[1];
