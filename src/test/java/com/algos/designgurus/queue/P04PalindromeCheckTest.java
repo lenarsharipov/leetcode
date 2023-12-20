@@ -27,4 +27,11 @@ class P04PalindromeCheckTest {
         assertTrue(actual);
     }
 
+    @Test
+    void test4() {
+        String s = "no x in nixon";
+        boolean actual = P04PalindromeCheck.checkPalindrome(s);
+        assertTrue(actual);
+    }
+
 }
