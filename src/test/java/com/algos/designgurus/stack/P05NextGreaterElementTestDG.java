@@ -44,4 +44,15 @@ class P05NextGreaterElementTestDG {
         assertArrayEquals(expected, actualResult, "Should have returned " + Arrays.toString(expected));
     }
 
+    @Test
+    @DisplayName("input: [1, 1, 1], output: [-1, -1, -1]")
+    void test4() {
+        int[] input = {1, 1, 1};
+        int[] expected = {-1, -1, -1};
+
+        int[] actualResult = solution.printNGE(input);
+
+        assertArrayEquals(expected, actualResult, "Should have returned " + Arrays.toString(expected));
+    }
+
 }

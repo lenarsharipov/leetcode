@@ -40,7 +40,7 @@ public class P05NextGreaterElement {
         Deque<Integer> stack = new ArrayDeque<>();
         int[] res = new int[n];
 
-        // Iterate through the array in reverse order
+//        // Iterate through the array in reverse order
         for (int i = n - 1; i >= 0; i--) {
             // Pop elements from the stack while they are smaller than or equal to the current element
             while (!stack.isEmpty() && stack.peek() <= arr[i]) {
@@ -57,4 +57,5 @@ public class P05NextGreaterElement {
 
         return res;
     }
+
 }
