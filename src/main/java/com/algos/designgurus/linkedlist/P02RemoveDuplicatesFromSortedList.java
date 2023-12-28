@@ -1,9 +1,9 @@
 package com.algos.designgurus.linkedlist;
 
-public class P03RemoveDuplicatesFromSortedList {
+public class P02RemoveDuplicatesFromSortedList {
 
     public static void main(String[] args) {
-        var solution = new P03RemoveDuplicatesFromSortedList();
+        var solution = new P02RemoveDuplicatesFromSortedList();
 
         // Test Example 1
         ListNode head1 = new ListNode(1, new ListNode(1, new ListNode(2)));
