@@ -86,12 +86,7 @@ public class SinglyLinkedList {
         linkedList.insertFirst(11);
         linkedList.insertFirst(8);
         linkedList.insertFirst(1);
-        linkedList.insertLast(333);
         linkedList.printElements();
 
-        linkedList.insertAt(2, 666);
-
-        linkedList.printElements();
-        System.out.println(linkedList.length());
     }
 }
