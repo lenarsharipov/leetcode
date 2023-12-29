@@ -49,9 +49,10 @@ public class P07SimplifyPath {
         StringBuilder result = new StringBuilder();
 
         // Reconstruct the simplified path by popping components from the stack
-        while (!stack.isEmpty()) {
+        for (String dir : stack) {
             // Insert '/' before each component to ensure correct path format
-            result.insert(0, "/" + stack.pop());
+            result.append("/");
+            result.append(dir);
         }
 
         // If the result is empty, return '/', otherwise return the simplified path
