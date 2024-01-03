@@ -28,7 +28,7 @@ public class SinglyLinkedList {
             node.next = head;
             head = node;
         } else {
-            ListNode prev = node;
+            ListNode prev = head;
             int count = 1;
             while (count < position - 1) {
                 prev = prev.next;
@@ -61,6 +61,32 @@ public class SinglyLinkedList {
         curr.next = node;
     }
 
+    public ListNode deleteFirst() {
+        if (head == null) {
+            return null;
+        }
+        ListNode deleted = head;
+        head = head.next;
+        deleted.next = null;
+        return deleted;
+    }
+
+    public ListNode deleteLast() {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode curr = head;
+        ListNode prev = null;
+        while (curr.next != null) {
+            prev = curr;
+            curr = curr.next;
+        }
+
+        prev.next = null;
+        return curr;
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -69,23 +95,35 @@ public class SinglyLinkedList {
             this.data = data;
             this.next = null;
         }
+
+        @Override
+        public String toString() {
+            return "ListNode{"
+                    + "data=" + data
+                    + ", next=" + next
+                    + '}';
+        }
     }
 
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
-//        linkedList.head = new ListNode(10);
-//        ListNode second = new ListNode(1);
-//        ListNode third = new ListNode(8);
-//        ListNode fourth = new ListNode(11);
-//
-//        linkedList.head.next = second; // 10 --> 1
-//        second.next = third; // 10 --> 1 --> 8
-//        third.next = fourth; // 10 --> 1 --> 8 --> 11 --> null
-//        linkedList.insertFirst(111);
 
         linkedList.insertFirst(11);
         linkedList.insertFirst(8);
         linkedList.insertFirst(1);
+
+        linkedList.insertLast(555);
+        linkedList.insertLast(666);
+        linkedList.insertAt(6, 777);
+        linkedList.printElements();
+
+        System.out.println(linkedList.deleteLast());
+        System.out.println(linkedList.deleteLast());
+        System.out.println(linkedList.deleteLast());
+        System.out.println(linkedList.deleteLast());
+        System.out.println(linkedList.deleteLast());
+        linkedList.printElements();
+        System.out.println(linkedList.deleteLast());
         linkedList.printElements();
 
     }

@@ -50,7 +50,7 @@ public class P06SortingStack {
         Stack<Integer> tmpStack = new Stack<>();
         while (!input.isEmpty()) {
             int tmp = input.pop();
-            while (!tmpStack.isEmpty() && tmp < tmpStack.peek()) {
+            while (!tmpStack.isEmpty() && tmpStack.peek() > tmp) {
                 input.push(tmpStack.pop());
             }
             tmpStack.push(tmp);
