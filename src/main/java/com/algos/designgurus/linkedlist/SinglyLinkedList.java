@@ -87,6 +87,21 @@ public class SinglyLinkedList {
         return curr;
     }
 
+    public void deleteAt(int position) {
+        if (position == 1) {
+            head = head.next;
+        } else {
+            ListNode prev = head;
+            int count = 1;
+            while (count < position - 1) {
+                prev = prev.next;
+                count++;
+            }
+            ListNode curr = prev.next;
+            prev.next = curr.next;
+        }
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -117,14 +132,27 @@ public class SinglyLinkedList {
         linkedList.insertAt(6, 777);
         linkedList.printElements();
 
-        System.out.println(linkedList.deleteLast());
-        System.out.println(linkedList.deleteLast());
-        System.out.println(linkedList.deleteLast());
-        System.out.println(linkedList.deleteLast());
-        System.out.println(linkedList.deleteLast());
-        linkedList.printElements();
-        System.out.println(linkedList.deleteLast());
+//        System.out.println(linkedList.deleteLast());
+//        System.out.println(linkedList.deleteLast());
+//        System.out.println(linkedList.deleteLast());
+//        System.out.println(linkedList.deleteLast());
+//        System.out.println(linkedList.deleteLast());
+//        linkedList.printElements();
+//        System.out.println(linkedList.deleteLast());
+//        linkedList.printElements();
+
+        System.out.println(linkedList.deleteAt(6));
         linkedList.printElements();
 
+        System.out.println(linkedList.deleteAt(5));
+        linkedList.printElements();
+        System.out.println(linkedList.deleteAt(4));
+        linkedList.printElements();
+        System.out.println(linkedList.deleteAt(3));
+        linkedList.printElements();
+        System.out.println(linkedList.deleteAt(2));
+        linkedList.printElements();
+        System.out.println(linkedList.deleteAt(1));
+        linkedList.printElements();
     }
 }
