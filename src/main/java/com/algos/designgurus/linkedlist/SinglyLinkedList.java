@@ -141,18 +141,18 @@ public class SinglyLinkedList {
 //        System.out.println(linkedList.deleteLast());
 //        linkedList.printElements();
 
-        System.out.println(linkedList.deleteAt(6));
+        linkedList.deleteAt(6);
         linkedList.printElements();
 
-        System.out.println(linkedList.deleteAt(5));
+        linkedList.deleteAt(5);
         linkedList.printElements();
-        System.out.println(linkedList.deleteAt(4));
+        linkedList.deleteAt(4);
         linkedList.printElements();
-        System.out.println(linkedList.deleteAt(3));
+        linkedList.deleteAt(3);
         linkedList.printElements();
-        System.out.println(linkedList.deleteAt(2));
+        linkedList.deleteAt(2);
         linkedList.printElements();
-        System.out.println(linkedList.deleteAt(1));
+        linkedList.deleteAt(1);
         linkedList.printElements();
     }
 }
