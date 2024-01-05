@@ -102,6 +102,23 @@ public class SinglyLinkedList {
         }
     }
 
+    public void insertInSortedList(int value) {
+        ListNode node = new ListNode(value);
+        if (head == null || value <= head.data) {
+            node.next = head;
+            head = node;
+        } else {
+            ListNode curr = head;
+            ListNode prev = null;
+            while (curr != null && value > curr.data) {
+                prev = curr;
+                curr = curr.next;
+            }
+            node.next = curr;
+            prev.next = node;
+        }
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -123,14 +140,14 @@ public class SinglyLinkedList {
     public static void main(String[] args) {
         SinglyLinkedList linkedList = new SinglyLinkedList();
 
-        linkedList.insertFirst(11);
-        linkedList.insertFirst(8);
-        linkedList.insertFirst(1);
-
-        linkedList.insertLast(555);
-        linkedList.insertLast(666);
-        linkedList.insertAt(6, 777);
-        linkedList.printElements();
+//        linkedList.insertFirst(11);
+//        linkedList.insertFirst(8);
+//        linkedList.insertFirst(1);
+//
+//        linkedList.insertLast(555);
+//        linkedList.insertLast(666);
+//        linkedList.insertAt(6, 777);
+//        linkedList.printElements();
 
 //        System.out.println(linkedList.deleteLast());
 //        System.out.println(linkedList.deleteLast());
@@ -141,18 +158,28 @@ public class SinglyLinkedList {
 //        System.out.println(linkedList.deleteLast());
 //        linkedList.printElements();
 
-        linkedList.deleteAt(6);
-        linkedList.printElements();
+//        linkedList.deleteAt(6);
+//        linkedList.printElements();
+//
+//        linkedList.deleteAt(5);
+//        linkedList.printElements();
+//        linkedList.deleteAt(4);
+//        linkedList.printElements();
+//        linkedList.deleteAt(3);
+//        linkedList.printElements();
+//        linkedList.deleteAt(2);
+//        linkedList.printElements();
+//        linkedList.deleteAt(1);
+//        linkedList.printElements();
 
-        linkedList.deleteAt(5);
-        linkedList.printElements();
-        linkedList.deleteAt(4);
-        linkedList.printElements();
-        linkedList.deleteAt(3);
-        linkedList.printElements();
-        linkedList.deleteAt(2);
-        linkedList.printElements();
-        linkedList.deleteAt(1);
+        linkedList.insertInSortedList(1);
+        linkedList.insertInSortedList(2);
+        linkedList.insertInSortedList(1);
+        linkedList.insertInSortedList(2);
+        linkedList.insertInSortedList(3);
+        linkedList.insertInSortedList(4);
+        linkedList.insertInSortedList(4);
+        linkedList.insertInSortedList(0);
         linkedList.printElements();
     }
 }
