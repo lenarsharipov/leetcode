@@ -119,6 +119,21 @@ public class SinglyLinkedList {
         }
     }
 
+    public void removeDuplicatesInSortedList() {
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        ListNode curr = head;
+        while (curr.next != null) {
+            if (curr.data == curr.next.data) {
+                curr.next = curr.next.next;
+            } else {
+                curr = curr.next;
+            }
+        }
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -172,14 +187,25 @@ public class SinglyLinkedList {
 //        linkedList.deleteAt(1);
 //        linkedList.printElements();
 
-        linkedList.insertInSortedList(1);
-        linkedList.insertInSortedList(2);
-        linkedList.insertInSortedList(1);
-        linkedList.insertInSortedList(2);
-        linkedList.insertInSortedList(3);
-        linkedList.insertInSortedList(4);
-        linkedList.insertInSortedList(4);
-        linkedList.insertInSortedList(0);
-        linkedList.printElements();
+//        linkedList.insertInSortedList(1);
+//        linkedList.insertInSortedList(2);
+//        linkedList.insertInSortedList(1);
+//        linkedList.insertInSortedList(2);
+//        linkedList.insertInSortedList(3);
+//        linkedList.insertInSortedList(4);
+//        linkedList.insertInSortedList(4);
+//        linkedList.insertInSortedList(0);
+//        linkedList.printElements();
+
+        // Remove duplicates in sorted list
+        var ll5 = new SinglyLinkedList();
+        ll5.insertInSortedList(1);
+        ll5.insertInSortedList(1);
+        ll5.insertInSortedList(2);
+        ll5.insertInSortedList(3);
+        ll5.insertInSortedList(3);
+        ll5.printElements();
+        ll5.removeDuplicatesInSortedList();
+        ll5.printElements();
     }
 }
