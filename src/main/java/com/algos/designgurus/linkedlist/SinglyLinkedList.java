@@ -22,25 +22,6 @@ public class SinglyLinkedList {
         return count;
     }
 
-    public void insertAt(int position, int value) {
-        ListNode node = new ListNode(value);
-        if (position == 1) {
-            node.next = head;
-            head = node;
-        } else {
-            ListNode prev = head;
-            int count = 1;
-            while (count < position - 1) {
-                prev = prev.next;
-                count++;
-            }
-            ListNode curr = prev.next;
-            prev.next = node;
-            node.next = curr;
-        }
-
-    }
-
     public void insertFirst(int value) {
         ListNode node = new ListNode(value);
         node.next = head;
@@ -59,6 +40,25 @@ public class SinglyLinkedList {
             curr = curr.next;
         }
         curr.next = node;
+    }
+
+    public void insertAt(int position, int value) {
+        ListNode node = new ListNode(value);
+        if (position == 1) {
+            node.next = head;
+            head = node;
+        } else {
+            ListNode prev = head;
+            int count = 1;
+            while (count < position - 1) {
+                prev = prev.next;
+                count++;
+            }
+            ListNode curr = prev.next;
+            prev.next = node;
+            node.next = curr;
+        }
+
     }
 
     public ListNode deleteFirst() {
