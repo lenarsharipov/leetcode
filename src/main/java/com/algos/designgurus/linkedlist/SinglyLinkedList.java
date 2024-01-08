@@ -187,15 +187,17 @@ public class SinglyLinkedList {
 //        linkedList.deleteAt(1);
 //        linkedList.printElements();
 
-//        linkedList.insertInSortedList(1);
-//        linkedList.insertInSortedList(2);
-//        linkedList.insertInSortedList(1);
-//        linkedList.insertInSortedList(2);
-//        linkedList.insertInSortedList(3);
-//        linkedList.insertInSortedList(4);
-//        linkedList.insertInSortedList(4);
-//        linkedList.insertInSortedList(0);
-//        linkedList.printElements();
+        // Insert into sorted list
+        var ll4 = new SinglyLinkedList();
+        ll4.insertInSortedList(1);
+        ll4.insertInSortedList(2);
+        ll4.insertInSortedList(2);
+        ll4.insertInSortedList(4);
+        ll4.insertInSortedList(1);
+        ll4.insertInSortedList(3);
+        ll4.insertInSortedList(4);
+        ll4.insertInSortedList(0);
+        ll4.printElements();
 
         // Remove duplicates in sorted list
         var ll5 = new SinglyLinkedList();
