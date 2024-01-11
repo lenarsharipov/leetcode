@@ -1,5 +1,7 @@
 package com.algos.designgurus.linkedlist;
 
+import java.util.LinkedList;
+
 public class SinglyLinkedList {
     private ListNode head;
 
@@ -134,6 +136,46 @@ public class SinglyLinkedList {
         }
     }
 
+    public boolean searchElement(int key) {
+        ListNode curr = head;
+        while (curr != null) {
+            if (curr.data == key) {
+                return true;
+            }
+            curr = curr.next;
+        }
+        return false;
+    }
+
+    public void reverseList() {
+        ListNode curr = head;
+        ListNode prev = null;
+        ListNode next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        head = prev;
+    }
+
+    public ListNode findMiddleNode() {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode slowPtr = head;
+        ListNode fastPtr = head;
+        while (fastPtr != null && fastPtr.next != null) {
+            slowPtr = slowPtr.next;
+            fastPtr = fastPtr.next.next;
+        }
+
+        return slowPtr;
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -203,11 +245,43 @@ public class SinglyLinkedList {
         var ll5 = new SinglyLinkedList();
         ll5.insertInSortedList(1);
         ll5.insertInSortedList(1);
+        ll5.insertInSortedList(1);
         ll5.insertInSortedList(2);
         ll5.insertInSortedList(3);
         ll5.insertInSortedList(3);
         ll5.printElements();
         ll5.removeDuplicatesInSortedList();
         ll5.printElements();
+
+        // Search for element in list
+        var ll6 = new SinglyLinkedList();
+        ll6.insertInSortedList(1);
+        ll6.insertInSortedList(1);
+        ll6.insertInSortedList(1);
+        ll6.insertInSortedList(2);
+        ll6.insertInSortedList(3);
+        ll6.insertInSortedList(3);
+        ll6.printElements();
+        System.out.println(ll6.searchElement(1));
+
+        // Reverse Linked List
+        System.out.println("Reverse Linked List:");
+        var ll7 = new SinglyLinkedList();
+        ll7.insertAt(1, 1);
+        ll7.insertAt(2, 2);
+        ll7.insertAt(3, 3);
+        ll7.printElements();
+        ll7.reverseList();
+        ll7.printElements();
+
+        // How to find middle node in a Singly Linked List
+        System.out.println("Find middle node in LinkedList");
+        linkedList = new SinglyLinkedList();
+        linkedList.insertAt(1, 1);
+        linkedList.insertAt(2, 2);
+        linkedList.insertAt(3, 3);
+        linkedList.insertAt(4, 4);
+        System.out.println(linkedList.findMiddleNode());
     }
+
 }
