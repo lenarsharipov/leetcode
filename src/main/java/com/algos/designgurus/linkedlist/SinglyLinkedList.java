@@ -176,6 +176,35 @@ public class SinglyLinkedList {
         return slowPtr;
     }
 
+    public ListNode findNthNodeFromTheEnd(int position) {
+        if (head == null) {
+            return null;
+        }
+
+        if (position < 1) {
+            throw new IllegalArgumentException("Invalid position value");
+        }
+
+        ListNode slow = head;
+        ListNode fast = head;
+        int count = 0;
+
+        while (count < position) {
+            if (fast == null) {
+                throw new IllegalArgumentException("Invalid position value");
+            }
+            count++;
+            fast = fast.next;
+        }
+
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return slow;
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -282,6 +311,22 @@ public class SinglyLinkedList {
         linkedList.insertAt(3, 3);
         linkedList.insertAt(4, 4);
         System.out.println(linkedList.findMiddleNode());
+
+        // Find Nth node from the end in Singly Linked List
+        System.out.println("Find Nth node from the end in Singly Linked List");
+        linkedList = new SinglyLinkedList();
+        System.out.println(linkedList.findNthNodeFromTheEnd(1));
+        linkedList.insertAt(1, 1);
+        linkedList.insertAt(2, 2);
+        linkedList.insertAt(3, 3);
+        linkedList.insertAt(4, 4);
+        System.out.println(linkedList.findNthNodeFromTheEnd(6));
+        System.out.println(linkedList.findNthNodeFromTheEnd(4));
+        System.out.println(linkedList.findNthNodeFromTheEnd(3));
+        System.out.println(linkedList.findNthNodeFromTheEnd(2));
+        System.out.println(linkedList.findNthNodeFromTheEnd(1));
+        System.out.println(linkedList.findNthNodeFromTheEnd(0));
+        System.out.println(linkedList.findNthNodeFromTheEnd(-1));
     }
 
 }
