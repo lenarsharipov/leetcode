@@ -205,6 +205,39 @@ public class SinglyLinkedList {
         return slow;
     }
 
+    public void createLoopedLinkedList() {
+        ListNode head = new ListNode(1);
+        ListNode second = new ListNode(2);
+        ListNode third = new ListNode(3);
+        ListNode fourth = new ListNode(4);
+        ListNode fifth = new ListNode(5);
+        ListNode sixth = new ListNode(6);
+        head.next = second;
+        second.next = third;
+        third.next = fourth;
+        fourth.next = fifth;
+        fifth.next = sixth;
+        sixth.next = third;
+
+        this.head = head;
+    }
+
+    public boolean containsLoop() {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (fast == slow) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
@@ -320,13 +353,16 @@ public class SinglyLinkedList {
         linkedList.insertAt(2, 2);
         linkedList.insertAt(3, 3);
         linkedList.insertAt(4, 4);
-        System.out.println(linkedList.findNthNodeFromTheEnd(6));
         System.out.println(linkedList.findNthNodeFromTheEnd(4));
         System.out.println(linkedList.findNthNodeFromTheEnd(3));
         System.out.println(linkedList.findNthNodeFromTheEnd(2));
         System.out.println(linkedList.findNthNodeFromTheEnd(1));
-        System.out.println(linkedList.findNthNodeFromTheEnd(0));
-        System.out.println(linkedList.findNthNodeFromTheEnd(-1));
+
+        // Detect Loop
+        System.out.println("Detect a Loop in Singly Linked List");
+        linkedList = new SinglyLinkedList();
+        linkedList.createLoopedLinkedList();
+        System.out.println(linkedList.containsLoop());
     }
 
 }
