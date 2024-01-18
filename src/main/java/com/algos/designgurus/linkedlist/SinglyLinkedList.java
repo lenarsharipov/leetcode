@@ -265,6 +265,30 @@ public class SinglyLinkedList {
         return null;
     }
 
+    public void removeLoop() {
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            if (slow == fast) {
+                removeLoopNode(slow);
+                return;
+            }
+        }
+    }
+
+    private void removeLoopNode(ListNode slow) {
+        ListNode temp = head;
+        while (slow.next != temp.next) {
+            slow = slow.next;
+            temp = temp.next;
+        }
+
+        slow.next = null;
+    }
+
     private static class ListNode {
         private int data; // Usually a Generic Type
         private ListNode next;
