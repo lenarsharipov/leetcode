@@ -1,5 +1,8 @@
 package com.algos.tree;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class BinaryTree {
     private TreeNode root;
 
@@ -21,14 +24,33 @@ public class BinaryTree {
 
     }
 
-    public void preOrder(TreeNode root) {
+    public void preOrderIterative(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Deque<TreeNode> stack = new ArrayDeque<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode temp = stack.pop();
+            System.out.print(temp.data + " ");
+            if (temp.right != null) {
+                stack.push(temp.right);
+            }
+
+            if (temp.left != null) {
+                stack.push(temp.left);
+            }
+        }
+    }
+
+    public void preOrderRecursive(TreeNode root) {
         if (root == null) {
             return;
         }
 
         System.out.print(root.data + " ");
-        preOrder(root.left);
-        preOrder(root.right);
+        preOrderRecursive(root.left);
+        preOrderRecursive(root.right);
     }
 
     private static class TreeNode {
@@ -53,7 +75,15 @@ public class BinaryTree {
     public static void main(String[] args) {
         var tree = new BinaryTree();
         tree.createBinaryTree();
-        tree.preOrder(tree.root);
+        // Recursive PreOrder Traversal
+        System.out.println("Recursive PreOrder Traversal");
+        tree.preOrderRecursive(tree.root);
+        System.out.println();
+
+        // Iterative PreOrder Traversal
+        System.out.println("Iterative PreOrder Traversal");
+        tree.preOrderIterative(tree.root);
+        System.out.println();
 
     }
 }
