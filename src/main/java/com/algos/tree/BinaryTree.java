@@ -26,7 +26,7 @@ public class BinaryTree {
             return;
         }
 
-        System.out.println(root.data + " ");
+        System.out.print(root.data + " ");
         preOrder(root.left);
         preOrder(root.right);
     }
